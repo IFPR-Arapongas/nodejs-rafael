@@ -1,0 +1,17 @@
+@local=http://localhost:3000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQGdtYWlsLmNvbSIsImlhdCI6MTc2MzU3NzY4NSwiZXhwIjoxNzYzNjY0MDg1fQ.JDoW0IsrwX8S-_ssLzsd3kfbLbuH5bV82k7ttL1EQtI
+
+GET {{local}}/clientes
+
+###
+GET {{local}}/clientes
+
+###
+POST {{local}}/login
+Content-Type: application/json
+
+{
+  "nome": "rafael",
+  "email": "rafael.rodrigues@gmail.com"
+  "senha": "123456"
+}
