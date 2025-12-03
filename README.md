@@ -1,6 +1,6 @@
 # Trabalho de Programação Web
 
-- **`Nome do estudante`**: [Nome]
+- **`Nome do estudante`**: [Rafael Rodrigues]
 - **`Nome do estudante`**: [Nome]
 
 ## 📋 Informações do Trabalho
