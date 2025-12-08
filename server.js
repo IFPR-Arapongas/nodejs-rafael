@@ -60,20 +60,4 @@ app.post('/login', async (req, res) => {
   res.status(200).send({ auth: true, message: 'Login realizado com sucesso' })
 })
 
-//
-const express = require("express");
-const app = express();
-const clientesRoutes = require("./routes/clientes.routes");
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Rotas
-app.use("/api/clientes", clientesRoutes);
-
-// Public (arquivos estáticos)
-app.use(express.static("./public"));
-
-app.listen(3000, () => {
-  console.log("Servidor rodando em http://localhost:3000");
-});
