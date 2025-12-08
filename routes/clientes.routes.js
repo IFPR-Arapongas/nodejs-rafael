@@ -14,18 +14,18 @@ router.get("/", async (req, res) => {
 
 // ➤ Criar novo cliente
 router.post("/", async (req, res) => {
-    const { nome, email, telefone } = req.body;
+    const { nome, email, cpf, data_nascimento, senha } = req.body;
 
-    if (!nome || !email) {
+    if (!nome || !email || !cpf || !data_nascimento, senha) {
         return res.status(400).json({ erro: "Nome e email são obrigatórios" });
     }
 
     try {
-        const sql = "INSERT INTO clientes (nome, email, telefone) VALUES (?, ?, ?)";
-        const params = [nome, email, telefone];
+        const sql = "INSERT INTO clientes (nome, email, cpf, data_nascimento, senha) VALUES (?, ?, ?)";
+        const params = [nome, email, cpf, data_nascimento, senha];
 
         const [result] = await pool.query(sql, params);
-        res.json({ id: result.insertId, nome, email, telefone });
+        res.json({ id: result.insertId, nome, email, cpf, data_nascimento, senha });
     } catch (err) {
         console.error(err);
         res.status(500).send("Erro ao cadastrar cliente");

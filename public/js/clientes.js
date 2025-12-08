@@ -31,6 +31,10 @@ window.addEventListener('load', async () => {
     td.textContent = new Date(cliente['data_nascimento']).toLocaleDateString();
     row.appendChild(td);
 
+    let tdSenha = document.createElement('td');
+    tdSenha.textContent = '******'; // não mostra a senha
+    row.appendChild(tdSenha);
+
     tbody.appendChild(row);
   });
 

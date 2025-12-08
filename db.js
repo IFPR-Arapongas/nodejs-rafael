@@ -26,10 +26,10 @@ export async function getClientById(id) {
   return rows;
 }
 
-export async function createClient(nome, email, cpf, data_nascimento) {
+export async function createClient(nome, email, cpf, data_nascimento, senha) {
   const [result] = await pool.execute(
     'INSERT INTO cliente (nome, email, cpf, data_nascimento) VALUES (?, ?, ?, ?)',
-    [nome, email, cpf, data_nascimento]
+    [nome, email, cpf, data_nascimento, senha]
   );
   return result.insertId;
 }
