@@ -35,11 +35,11 @@ window.addEventListener('load', async () => {
     tdSenha.textContent = '******'; // não mostra a senha
     row.appendChild(tdSenha);
 
-    tbody.appendChild(row);
-  });
+        tbody.appendChild(row);
+    });
 
-  thead.appendChild(headerRow);
-  tabela.appendChild(thead);
-  tabela.appendChild(tbody);
-  divClientes.appendChild(tabela);
-})
+    thead.appendChild(headerRow);
+    tabela.appendChild(thead);
+    tabela.appendChild(tbody);
+    divClientes.appendChild(tabela);
+  })
