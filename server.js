@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import cookieParser from 'cookie-parser';
 
-import clientesRouter from './routes/clients.routes.js';
+import clientesRouter from './routes/clientes.routes.js';
 
 dotenv.config();
 
